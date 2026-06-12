@@ -66,7 +66,7 @@ function getLabelText(value) {
     };
 
     const response = await fetch(
-      "http://localhost:8000/api/send-feedback",
+      "https://home-wedding-back-x79w.vercel.app/api/send-feedback",
       {
         method: "POST",
         headers: {
