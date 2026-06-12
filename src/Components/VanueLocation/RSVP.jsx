@@ -33,7 +33,7 @@ const handleMemorySubmit = async (e) => {
     setLoading(true);
 
     const response = await fetch(
-      "http://localhost:8000/api/send-memory",
+      "https://home-wedding-back-x79w.vercel.app/api/send-memory",
       {
         method: "POST",
         headers: {
