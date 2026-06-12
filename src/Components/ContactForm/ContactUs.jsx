@@ -39,7 +39,7 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await fetch(
-      "http://localhost:8000/api/contact",
+      "https://home-wedding-back-x79w.vercel.app/api/contact",
       {
         method: "POST",
         headers: {
