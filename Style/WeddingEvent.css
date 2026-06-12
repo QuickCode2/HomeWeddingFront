@@ -492,12 +492,12 @@
 
 /* LEFT CARD */
 .reception-card.left::before {
-  right: 41.4rem;
+  right: 40.8rem;
 }
 
 /* RIGHT CARD */
 .reception-card.right::before {
-  left: 41.4rem;
+  left: 40.9rem;
 }
 
 
@@ -555,12 +555,12 @@
   /* Timeline dots align */
   .reception-card.right::before{
     left: 53.2%;
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 
   .reception-card.left::before{
-    left: 46.9%;
-    transform: translateX(-50%);
+    left: 49.9%;
+    transform: translateX(-100%);
   }
 }
 
@@ -654,7 +654,7 @@
   }
 
   .reception-card::before {
-    left: 4px !important;
+    left: 15px !important;
     width: 18px;
     height: 18px;
   }
@@ -674,9 +674,9 @@
   }
 
   .reception-card.right::before{
-    margin-left: 0.2%;
+    margin-right: 50%;
     top: 120px;
-    transform: translateX(-60%);
+    transform: translateX(-180%);
   
   }
 }
@@ -727,14 +727,14 @@
   .reception-card.left::before{
     left: 50%;
     top: 120px;
-    transform: translateX(-120%);
+    transform: translateX(-130%);
     width: 18px;
     height: 18px;
   }
 
   .reception-card.right::before{
     top: 120px;
-    transform: translateX(-25%);
+    transform: translateX(-135%);
     
   }
 

@@ -31,7 +31,7 @@ import Gallery16 from "../assets/Memory-WeddingGallery/Gallery6.png";
 import Gallery17 from "../assets/Memory-WeddingGallery/Gallery7.png";
 import Gallery18 from "../assets/Memory-WeddingGallery/Gallery8.png";
 import Gallery19 from "../assets/Memory-WeddingGallery/Gallery9.png";
-import Gallery20 from "../assets/Memory-WeddingGallery/Gallery10.png";
+import Gallery20 from "../assets/Memory-WeddingGallery/Gallery110.png";
 import Gallery21 from "../assets/Memory-WeddingGallery/Gallery11.png";
 import Gallery22 from "../assets/Memory-WeddingGallery/Gallery12.png";
 import Gallery23 from "../assets/Memory-WeddingGallery/Gallery13.png";
