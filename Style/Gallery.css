@@ -1,0 +1,301 @@
+
+/* ===============================
+  SLIDER (RENAMED)
+================================ */
+
+.portfolioSliderSection1 {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolioSliderContainer1 {
+  position: relative;
+  width: 1135px;
+  height: 755px;
+}
+
+.portfolioSliderSlides1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* SLIDER IMAGES */
+
+.portfolioSliderImage1 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.portfolioSliderActive1 {
+  opacity: 1;
+}
+
+/* SLIDER TITLE */
+
+.portfolioSliderTitle1 {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-family: "lechit", sans-serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: black;
+
+  z-index: 2;
+}
+
+/* SLIDER CONTROLS */
+
+.portfolioSliderButtons1 span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.4s;
+  user-select: none;
+  z-index: 3;
+}
+
+.portfolioSliderNext1 {
+  right: 20px;
+}
+
+.portfolioSliderPrev1 {
+  left: 20px;
+}
+
+.portfolioSliderButtons1 span:hover {
+  background: #ede6d6;
+  color: #222;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================RESPONSIVE===================================== */
+
+/* ===============================
+        Mobile 768px
+================================ */
+
+@media (max-width: 768px) {
+  .portfolioSliderContainer1 {
+    width: 350px;
+    height: 215px;
+  }
+
+  .portfolioSliderTitle1 {
+    font-size: 25px;
+  }
+
+  .portfolioSliderButtons1 span {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+
+
+
+/* ===============================
+        Mobile 768px
+================================ */
+
+@media (max-width: 768px) {
+  .portfolioSliderContainer1 {
+    width: 350px;
+    height: 215px;
+  }
+
+  .portfolioSliderTitle1 {
+    font-size: 25px;
+  }
+
+  .portfolioSliderButtons1 span {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* ===============================
+   PORTFOLIO CTA (RENAMED)
+================================ */
+
+.portfolioCtaSection1 {
+  width: 100%;
+  background: white;
+  padding: 80px 0; /* controls vertical space */
+  display: flex;
+  justify-content: center;
+}
+
+.portfolioCtaWrapper1 {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* LEFT BIG HEADING */
+
+.portfolioCtaHeading1 {
+  font-family: "lechit", sans-serif;
+  font-size: 55px;
+  font-weight: 600;
+  color: black;
+  white-space: nowrap;
+}
+
+/* RIGHT CONTENT */
+
+.portfolioCtaContent1 {
+  max-width: 520px;
+}
+
+.portfolioCtaText1 {
+  font-family: "buch", sans-serif;
+  font-size: 17.5px;
+  font-weight: 500;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+/* BUTTON */
+
+.portfolioCtaButton1 {
+  font-family: "buch", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 3px solid #5a4f4f;
+  cursor: pointer;
+}
+
+.portfolioCtaArrow1 {
+  font-size: 20px;
+}
+
+
+
+/* ===============================
+   INFINITE SLIDER
+================================ */
+
+.Islider {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  padding: 60px 0;
+}
+
+.sliderTrack {
+  display: flex;
+  width: max-content;
+  animation: scroll 18s linear infinite;
+}
+
+.sliderTrack:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  width: 343px;
+  height: 516px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.slide img {
+  width: 100%;
+  transition: transform 1s;
+}
+
+.slide img:hover {
+  transform: translateZ(15px);
+}
+
+/* INFINITE SCROLL */
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-30%);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .portfolioContainer {
+    font-size: 35px;
+    padding: 40px 0;
+  }
+
+  .Scontainer {
+    width: 350px;
+    height: 215px;
+  }
+
+  .text {
+    font-size: 25px;
+  }
+
+  .buttons span {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .headText {
+    font-size: 35px;
+  }
+
+  .para1 {
+    font-size: 13px;
+  }
+
+  .fotoBtn {
+    font-size: 13px;
+  }
+
+  .slide {
+    width: 200px;
+    height: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .portfolioCtaHeading1 {
+    font-size: 22px;
+  }
+}

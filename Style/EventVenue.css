@@ -1,0 +1,465 @@
+.venue-section {
+  padding: 100px 20px;
+  background: black;
+}
+
+.venue-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.venue-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.venue-subtitle {
+  background: linear-gradient(90deg, #D4AF37, #f5e6c4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.venue-header h2 {
+  margin-top: 10px;
+  font-size: 2.8rem;
+  color: white;
+}
+
+.venue-header p {
+  max-width: 650px;
+  margin: 15px auto 0;
+  color: white;
+  line-height: 1.7;
+}
+.venue-content{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+/* ---------- Invitation Card ---------- */
+
+.venue-info{
+  animation: slideLeft 1s ease;
+}
+
+.image-wrapper{
+  position:relative;
+  overflow:hidden;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+.image-wrapper img{
+  width: 80%;
+  height: 600px;
+  object-fit:cover;
+  border-radius:30px;
+  transition:0.8s ease;
+}
+
+.image-wrapper:hover img{
+  transform:scale(1.08);
+}
+
+.image-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.75),
+    transparent
+  );
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:30px;
+}
+
+.image-overlay h3{
+  color:#fff;
+  font-size:2rem;
+}
+
+.image-overlay p{
+  color:#ceb15d;
+}
+
+/* ---------- Map Card ---------- */
+
+.venue-map-card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255, 255, 255, 0.169);
+  border-radius:30px;
+  padding: 20px;
+  animation:slideRight 1s ease;
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.4);
+}
+
+.map-header{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.map-header h3{
+  color:#fff;
+  margin:0;
+}
+
+.map-header p{
+  color:#bdbdbd;
+  margin-top:5px;
+}
+
+/* Animated Pin */
+
+.location-pin{
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:green;
+  position:relative;
+}
+
+.location-pin::before{
+  content:"";
+  position:absolute;
+  inset:-10px;
+  border:2px solid green;
+  border-radius:50%;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{
+    transform:scale(0.8);
+    opacity:1;
+  }
+  100%{
+    transform:scale(2);
+    opacity:0;
+  }
+}
+
+.venue-map{
+  height:420px;
+  overflow:hidden;
+  border-radius:20px;
+}
+
+.venue-map iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  transition:.5s;
+}
+
+.venue-map:hover iframe{
+  transform:scale(1.03);
+}
+
+.direction-btn{
+  display:block;
+  margin-top:25px;
+  text-align:center;
+  font-weight:700;
+  padding:15px;
+  border-radius:50px;
+  text-decoration:none;
+  transition:.4s;
+  background: linear-gradient(90deg, #D4AF37, #f5e6c4);
+}
+
+.direction-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:
+  0 15px 30px rgb(255, 255, 255, 0.1);
+}
+
+/* Animations */
+
+@keyframes slideLeft{
+  from{
+    opacity:0;
+    transform:translateX(-80px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@keyframes slideRight{
+  from{
+    opacity:0;
+    transform:translateX(80px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+/* ====================================
+   LARGE TABLET & SMALL LAPTOP
+   1024px
+==================================== */
+@media (max-width: 1024px) {
+ .venue-section {
+    padding: 100px 12px;
+  }
+
+
+  .venue-content {
+    gap: 30px;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+
+  .venue-map {
+    height: 400px;
+  }
+
+  .venue-header h2 {
+    font-size: 2.4rem;
+  }
+}
+
+
+/* ====================================
+         TABLET 768px
+==================================== */
+@media (max-width: 768px) {
+  .venue-section {
+    padding: 100px 12px;
+  }
+
+  .venue-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .venue-info,
+  .venue-map-card {
+    width: 100%;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+
+  .venue-map {
+    height: 350px;
+  }
+
+  .venue-header {
+    margin-bottom: 40px;
+  }
+
+  .venue-header h2 {
+    font-size: 2rem;
+  }
+
+  .venue-header p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .image-overlay h3 {
+    font-size: 1.7rem;
+  }
+
+  .map-header h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ====================================
+         MOBILE 576px
+==================================== */
+@media (max-width: 576px) {
+ .venue-section {
+    padding: 100px 12px;
+  }
+
+
+  .venue-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .venue-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+  }
+
+  .venue-header p {
+    font-size: 14px;
+  }
+
+  .image-wrapper {
+    border-radius: 20px;
+  }
+
+  .image-wrapper img {
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .image-overlay {
+    padding: 20px;
+  }
+
+  .image-overlay h3 {
+    font-size: 1.4rem;
+  }
+
+  .image-overlay p {
+    font-size: 14px;
+  }
+
+  .venue-map-card {
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .venue-map {
+    height: 300px;
+  }
+
+  .direction-btn {
+    padding: 13px;
+    font-size: 14px;
+  }
+}
+
+
+/* ====================================
+       SMALL MOBILE 425px
+==================================== */
+@media (max-width: 425px) {
+  .venue-section {
+    padding: 100px 12px;
+  }
+
+  .venue-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .venue-header p {
+    font-size: 13px;
+  }
+
+  .image-wrapper img {
+    height: auto;
+  }
+
+  .image-overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .image-overlay p {
+    font-size: 13px;
+  }
+
+  .venue-map {
+    height: 260px;
+  }
+
+  .map-header {
+    gap: 10px;
+  }
+
+  .map-header h3 {
+    font-size: 1rem;
+  }
+
+  .map-header p {
+    font-size: 13px;
+  }
+
+  .direction-btn {
+    font-size: 13px;
+    padding: 12px;
+  }
+}
+
+
+/* ====================================
+      EXTRA SMALL MOBILE 375px
+==================================== */
+@media (max-width: 375px) {
+  .venue-section {
+    padding: 100px 12px;
+  }
+
+  .venue-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .venue-subtitle {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+  }
+
+  .image-wrapper img {
+    height: auto;
+  }
+
+  .venue-map {
+    height: 240px;
+  }
+
+  .image-overlay {
+    padding: 15px;
+  }
+
+  .image-overlay h3 {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* ====================================
+      VERY SMALL DEVICES 320px
+==================================== */
+@media (max-width: 320px) {
+ .venue-section {
+    padding: 100px 12px;
+  }
+
+  .venue-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .venue-header p {
+    font-size: 12px;
+  }
+
+  .image-wrapper img {
+    height: auto;
+  }
+
+  .venue-map {
+    height: 220px;
+  }
+
+  .direction-btn {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

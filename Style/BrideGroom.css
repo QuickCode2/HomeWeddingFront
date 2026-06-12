@@ -1,0 +1,891 @@
+/* ===============================
+   FONTS (ONLY IF NOT GLOBAL)
+================================ */
+
+@font-face {
+  font-family: "lechit";
+  src: url("../fonts/TestSohneBreit-Extraleicht-BF663d89cd9eb84.otf");
+}
+
+@font-face {
+  font-family: "buch";
+  src: url("../fonts/TestSohneBreit-Buch-BF663d89ca2ff42.otf");
+}
+
+/* ===============================
+   BASIC RESET
+================================ */
+
+.BrideGroomPage * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   BRIDEGROOM HERO
+================================ */
+.portfolioHero {
+  position: relative;
+  min-height: 55vh;
+  padding: 120px 20px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at top center,
+      rgba(255, 215, 140, 0.15),
+      transparent 40%),
+    linear-gradient(
+      180deg,
+      #000,
+      #000000
+    );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #fff;
+}
+
+/* Background Glow */
+.portfolioHero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 215, 140, 0.08);
+  filter: blur(120px);
+  border-radius: 50%;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* Tag */
+.portfolioTag {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #d4af7a;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+/* Heading */
+.portfolioHero h1 {
+  font-size: clamp(3.2rem, 8vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    #fff,
+    #d9d9d9
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Decorative Line */
+.portfolioLine {
+  width: 120px;
+  height: 2px;
+  margin: 25px 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4af7a,
+    transparent
+  );
+}
+
+/* Description */
+.portfolioHero p {
+  max-width: 720px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+}
+
+/* ================================== RESPONSIVE ================================== */
+/* ==================================
+   LARGE SCREEN (1440px+)
+================================== */
+@media (min-width: 1441px) {
+  .portfolioHero {
+    min-height: 65vh;
+    padding: 150px 40px;
+  }
+
+  .portfolioHero h1 {
+    font-size: 5.5rem;
+  }
+
+  .portfolioHero p {
+    max-width: 850px;
+    font-size: 1.3rem;
+  }
+
+  .portfolioLine {
+    width: 140px;
+  }
+}
+
+/* ==================================
+   LAPTOP (1024px - 1440px)
+================================== */
+@media (max-width: 1440px) {
+  .portfolioHero {
+    min-height: 55vh;
+    padding: 120px 30px;
+  }
+
+  .portfolioHero h1 {
+    font-size: clamp(3.5rem, 7vw, 4.8rem);
+  }
+}
+
+/* ==================================
+   TABLET (768px - 1024px)
+================================== */
+@media (max-width: 1024px) {
+  .portfolioHero {
+    min-height: 50vh;
+    padding: 100px 30px;
+  }
+
+  .portfolioHero::before {
+    width: 400px;
+    height: 400px;
+  }
+
+  .portfolioTag {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+  }
+
+  .portfolioHero h1 {
+    font-size: 3.4rem;
+  }
+
+  .portfolioHero p {
+    max-width: 650px;
+    font-size: 1.05rem;
+  }
+}
+
+/* ==================================
+   MOBILE LARGE (≤768px)
+================================== */
+@media (max-width: 768px) {
+  .portfolioHero {
+    min-height: 45vh;
+    padding: 90px 25px 70px;
+  }
+
+  .portfolioHero::before {
+    width: 320px;
+    height: 320px;
+    filter: blur(90px);
+  }
+
+  .portfolioTag {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  .portfolioHero h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+
+  .portfolioLine {
+    width: 85px;
+    margin: 20px 0;
+  }
+
+  .portfolioHero p {
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 95%;
+  }
+}
+
+/* ==================================
+   MOBILE (≤425px)
+================================== */
+@media (max-width: 425px) {
+  .portfolioHero {
+    min-height: 42vh;
+    padding: 80px 20px 60px;
+  }
+
+  .portfolioTag {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .portfolioHero h1 {
+    font-size: 2.2rem;
+  }
+
+  .portfolioLine {
+    width: 70px;
+    margin: 18px 0;
+  }
+
+  .portfolioHero p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* ==================================
+   SMALL MOBILE (≤375px)
+================================== */
+@media (max-width: 375px) {
+  .portfolioHero {
+    padding: 75px 18px 55px;
+  }
+
+  .portfolioHero h1 {
+    font-size: 2rem;
+  }
+
+  .portfolioHero p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .portfolioLine {
+    width: 60px;
+  }
+}
+
+/* ==================================
+   EXTRA SMALL (≤320px)
+================================== */
+@media (max-width: 320px) {
+  .portfolioHero {
+    padding: 70px 15px 50px;
+  }
+
+  .portfolioTag {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+
+  .portfolioHero h1 {
+    font-size: 1.75rem;
+  }
+
+  .portfolioHero p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .portfolioLine {
+    width: 50px;
+    margin: 15px 0;
+  }
+
+  .portfolioHero::before {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+/* ===============================
+   BRIDEGROOM SLIDER
+================================ */
+
+.portfolioSlider{
+  width:100%;
+  padding:60px 0;
+  background:#000;
+}
+
+.sliderWrapper{
+  position:relative;
+  width:min(95%,1300px);
+  height:300px;
+  margin:auto;
+  overflow:hidden;
+  border-radius:24px;
+  background:#111;
+  box-shadow:0 20px 60px rgba(255,255,255,.05);
+}
+
+.sliderImage{
+  width:100%;
+  height:100%;
+  display:block;
+  opacity:0;
+  transition:opacity .6s ease;
+  object-fit:cover;
+  object-position: center 20%;
+}
+
+.showImage{
+  opacity:1;
+}
+
+.showImage{
+  opacity:1;
+}
+
+.sliderOverlay{
+  position:absolute;
+  inset:0;
+  z-index:5;
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  padding-bottom:40px;
+}
+
+.sliderOverlay h2{
+  font-size:clamp(1rem,4vw,4rem);
+  font-weight:800;
+  letter-spacing:6px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.65);
+  text-align:center;
+  margin:0;
+}
+
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+
+  width: 35px;
+  height: 35px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:none;
+  border-radius:50%;
+  background:rgba(255,255,255,.15);
+  color:#fff;
+  font-size:16px;
+  line-height:1;
+  cursor:pointer;
+  z-index:20;
+}
+
+.left{
+  left: 15px;
+}
+
+.right{
+  right: 15px;
+}
+
+
+
+/* ==================================
+   Large Screen (1441px+)
+================================== */
+@media (min-width: 1441px) {
+  .sliderWrapper {
+    max-width: 1600px;
+    height: 800px;
+  }
+
+  .sliderOverlay h2 {
+    font-size: 5.5rem;
+    letter-spacing: 20px;
+  }
+}
+
+/* ==================================
+   Tablet Wide (769px – 1024px)
+================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .portfolioSlider {
+    padding: 50px 0;
+  }
+
+  .sliderWrapper {
+    width: 94%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .sliderOverlay {
+    padding-bottom: 45px;
+  }
+
+  .sliderOverlay h2 {
+    font-size: 3rem;
+    letter-spacing: 8px;
+  }
+
+  .arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+/* ==================================
+   Tablet Narrow (426px – 768px)
+================================== */
+@media (min-width: 426px) and (max-width: 768px) {
+  .portfolioSlider {
+    padding: 40px 0;
+  }
+
+  .sliderWrapper {
+    width: 95%;
+    height: 400px;
+    border-radius: 18px;
+  }
+
+  .sliderOverlay {
+    padding-bottom: 35px;
+  }
+
+  .sliderOverlay h2 {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    line-height: 1.2;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .sliderImage {
+    object-position: center center;
+  }
+
+  .left { left: 12px; }
+  .right { right: 12px; }
+}
+
+/* ==================================
+   Mobile (≤425px)
+================================== */
+@media (max-width:425px){
+
+  .portfolioSlider{
+    padding:30px 0;
+  }
+
+  .sliderWrapper{
+    width:95%;
+    height:260px;
+    border-radius:14px;
+  }
+
+  .sliderImage{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+  }
+
+  .sliderOverlay{
+    padding-bottom:15px;
+  }
+
+  .sliderOverlay h2{
+    font-size:1rem;
+    letter-spacing:2px;
+    line-height:1.2;
+    padding:0 8px;
+  }
+}
+
+
+/* ==================================
+   Small Mobile (≤375px)
+================================== */
+@media (max-width:375px){
+
+  .sliderWrapper{
+    width:95%;
+    height:220px;
+  }
+
+  .sliderOverlay h2{
+    font-size:.9rem;
+    letter-spacing:1px;
+  }
+}
+
+
+/* ==================================
+   Extra Small (≤320px)
+================================== */
+@media (max-width:320px){
+
+  .sliderWrapper{
+    width:96%;
+    height:190px;
+  }
+
+  .sliderOverlay h2{
+    font-size:.8rem;
+    letter-spacing:1px;
+  }
+
+  .arrow{
+    width:28px;
+    height:28px;
+    font-size:14px;
+  }
+}
+
+
+/* ===============================
+   BRIDEGROOM CTA
+================================ */
+.BrideGroomCtaSection1 {
+  padding: 50px 20px;
+  background:
+    radial-gradient(
+      circle at bottom center,
+      rgba(212, 175, 122, 0.12),
+      transparent 45%
+    ),
+    #000;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.BrideGroomCtaWrapper1 {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.BrideGroomCtaTag1 {
+  display: inline-block;
+  color: #d4af7a;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.BrideGroomCtaHeading1 {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 30px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #cfcfcf
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.BrideGroomCtaText1 {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  color: rgba(255,255,255,0.75);
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+.portfolioCtaButton1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 18px 35px;
+  border-radius: 100px;
+
+  background: linear-gradient(
+    135deg,
+    #d4af7a,
+    #f0d7a7
+  );
+
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.portfolioCtaButton1:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 15px 35px rgba(212, 175, 122, 0.25);
+}
+
+.BrideGroomCtaArrow1 {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.portfolioCtaButton1:hover .BrideGroomCtaArrow1 {
+  transform: translateX(5px);
+}
+
+
+/* ==================================RESPONSIVE================================== */
+
+/* ==================================
+   Tablet (426px – 768px)
+================================== */
+@media (min-width: 426px) and (max-width: 768px) {
+
+  .BrideGroomCtaSection1{
+    padding: 60px 25px;
+  }
+
+  .BrideGroomCtaWrapper1{
+    max-width: 90%;
+  }
+
+  .BrideGroomCtaTag1{
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+
+  .BrideGroomCtaHeading1{
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+
+  .BrideGroomCtaText1{
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+  }
+
+  .portfolioCtaButton1{
+    padding: 16px 30px;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ==================================
+   Mobile (≤425px)
+================================== */
+@media (max-width: 425px) {
+
+  .BrideGroomCtaSection1{
+    padding: 50px 18px;
+  }
+
+  .BrideGroomCtaWrapper1{
+    width: 100%;
+  }
+
+  .BrideGroomCtaTag1{
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  .BrideGroomCtaHeading1{
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .BrideGroomCtaText1{
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+
+  .portfolioCtaButton1{
+    padding: 14px 24px;
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+
+  .BrideGroomCtaArrow1{
+    font-size: 1rem;
+  }
+}
+
+
+/* ==================================
+   Small Mobile (≤375px)
+================================== */
+@media (max-width: 375px) {
+
+  .BrideGroomCtaSection1{
+    padding: 40px 15px;
+  }
+
+  .BrideGroomCtaHeading1{
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+  }
+
+  .BrideGroomCtaText1{
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .portfolioCtaButton1{
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+
+  .BrideGroomCtaArrow1{
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ==================================
+   Extra Small Mobile (≤320px)
+================================== */
+@media (max-width: 320px) {
+
+  .BrideGroomCtaSection1{
+    padding: 35px 12px;
+  }
+
+  .BrideGroomCtaTag1{
+    font-size: 0.65rem;
+  }
+
+  .BrideGroomCtaHeading1{
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  .BrideGroomCtaText1{
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  .portfolioCtaButton1{
+    padding: 10px 18px;
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+
+  .BrideGroomCtaArrow1{
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ===============================
+   BRIDEGROOM SLIDER
+================================ */
+
+.BrideGroomSlider {
+  width: 100%;
+  overflow: hidden;
+  background: black;
+  padding: 60px 0;
+}
+
+.BrideGroomSliderTrack {
+  display: flex;
+  width: max-content;
+  animation: brideScroll 18s linear infinite;
+}
+
+.BrideGroomSliderTrack:hover {
+  animation-play-state: paused;
+}
+
+.BrideGroomSlide {
+  width: 343px;
+  height: 516px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.BrideGroomSlide img {
+  width: 100%;
+  transition: transform 1s;
+}
+
+.BrideGroomSlide img:hover {
+  transform: translateZ(15px);
+}
+
+/* ===============================
+   BRIDE SLIDER ANIMATION
+================================ */
+
+@keyframes brideScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===============================
+   RESPONSIVE GENERAL
+================================ */
+
+@media (max-width: 768px) {
+  .BrideGroomContainer {
+    font-size: 35px;
+    padding: 40px 0;
+  }
+
+  .BrideGroomScontainer {
+    width: 350px;
+    height: 215px;
+  }
+
+  .BrideGroomText {
+    font-size: 25px;
+  }
+
+  .BrideGroomButtons span {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .BrideGroomHeadText {
+    font-size: 35px;
+  }
+
+  .BrideGroomPara1 {
+    font-size: 13px;
+  }
+
+  .BrideGroomFotoBtn {
+    font-size: 13px;
+  }
+
+  .BrideGroomSlide {
+    width: 200px;
+    height: 300px;
+  }
+}
+

@@ -1,0 +1,96 @@
+/* ==========================
+   VIDEO SECTION
+========================== */
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Video wrapper */
+.video-wrapper {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Video element */
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  display: block;
+  margin-top: 10%;
+}
+
+/* Volume button */
+.volume-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.volume-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.volume-btn svg {
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .video-section {
+    padding: 1.5rem;
+  }
+
+  /* Video element */
+.video-wrapper video {
+  margin-top: 25%;
+}
+
+  .volume-btn {
+    padding: 0.6rem;
+  }
+
+  .volume-btn svg {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile (<767px) */
+@media (max-width: 767px) {
+  .video-section {
+    padding: 1rem;
+  }
+
+  .video-wrapper video {
+    border-radius: 0.75rem;
+    margin-top: 37rem;
+  }
+
+  .volume-btn {
+    padding: 0.5rem;
+    bottom: 0.8rem;
+    right: 0.8rem;
+  }
+
+  .volume-btn svg {
+    font-size: 1.4rem;
+  }
+}

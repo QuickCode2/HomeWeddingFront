@@ -1,0 +1,266 @@
+/* ==========================
+   SERVICES SECTION
+========================== */
+.services-section {
+  padding: 50px 20px;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: 50%;
+  top: -150px;
+  left: -100px;
+  filter: blur(140px);
+}
+
+.services-container {
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================
+   HEADER
+========================== */
+.services-header {
+  text-align: center;
+  margin-bottom: 70px;
+  opacity: 0; /* GSAP will animate to 1 */
+  transform: translateY(40px);
+}
+
+.services-subtitle {
+  background: linear-gradient(90deg, #D4AF37, #f5e6c4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.services-header h2 {
+  margin-top: 15px;
+  font-size: 3rem;
+  color: white;
+}
+
+.services-header p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: #bdbdbd;
+  line-height: 1.8;
+}
+
+/* ==========================
+   SERVICES GRID
+========================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  position: relative;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+  padding: 40px 30px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.service-card:hover {
+  transform: translateY(-15px) scale(1.03); 
+  border-color: #D4AF37;
+  box-shadow: 0 10px 30px rgba(212,175,55,.25),
+              0 20px 40px rgba(0,0,0,.5);
+}
+
+
+.service-number {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.05);
+}
+
+.service-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.service-card h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  color: #bdbdbd;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #D4AF37, #f5e6c4);
+  color: black;
+  font-weight: 700;
+  transition: 0.4s;
+}
+
+.service-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(212,175,55,0.2);
+}
+
+/* ==========================
+   PROCESS
+========================== */
+.process-section {
+  margin-top: 120px;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0; /* GSAP start */
+  transform: translateY(40px);
+}
+
+.process-header h2 {
+  margin-top: 15px;
+  color: white;
+  font-size: 2.8rem;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.process-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0; 
+  transform: translateY(16px);
+}
+
+.process-card:hover {
+  transform: translateY(-15px) scale(1.03); 
+  border-color: #D4AF37;
+  box-shadow: 0 10px 30px rgba(212,175,55,.25),
+              0 20px 40px rgba(0,0,0,.5);
+}
+
+.process-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #D4AF37, #f5e6c4);
+  color: black;
+}
+
+.process-card h3, p {
+  color: #bdbdbd;
+}
+
+/* ==========================
+   CTA
+========================== */
+.services-cta {
+  margin-top: 120px;
+  text-align: center;
+  padding: 70px 30px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  opacity: 0; /* GSAP start */
+  transform: scale(0.9);
+}
+
+.services-cta h2 {
+  color: white;
+  font-size: 2.8rem;
+}
+
+.services-cta p {
+  margin: 20px auto;
+  color: #bdbdbd;
+  max-width: 650px;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #D4AF37, #f5e6c4);
+  color: black;
+  font-weight: 700;
+  transition: 0.4s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(212,175,55,0.2);
+}
+
+/* ==========================
+   FLOATING ANIMATION
+========================== */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media(max-width:768px) {
+  .services-header h2,
+  .process-header h2,
+  .services-cta h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}

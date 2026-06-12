@@ -1,0 +1,492 @@
+.about-section {
+  width: 100%;
+  padding: 130px 20px;
+  background: black;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-content {
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-subtitle {
+  display: inline-block;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #D4AF37, #f5e6c4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.about-title {
+  font-size: 2.7rem;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 70px;
+  font-family: "Playfair Display", serif;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: white;
+   margin-bottom: 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.about-text h3 {
+  font-size: 1.4rem;
+  text-align: justify;
+  font-family:cursive;
+}
+
+.about-text p {
+  font-size: 1.30rem;
+  line-height: 2;
+  color: #ffffff;
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.about-quote {
+  margin-top: 40px;
+  padding: 25px;
+  border-color: #ccc;
+  border-width: 2px;
+  border-left: 4px solid #D4AF37;
+  background: linear-gradient(90deg, #D4AF37, #f5e6c4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgb(36, 35, 35);
+}
+
+
+.heart {
+  color: red;
+  -webkit-text-fill-color: red;
+  background: none;
+}
+
+
+.about-quote p {
+  font-size: 1.3rem;
+  color: white;
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+}
+
+
+/* ==========================
+   Smooth Entrance Animations
+========================== */
+
+.about-subtitle {
+  animation: fadeDown 1s ease forwards;
+}
+
+.about-title {
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.about-text:nth-of-type(1) {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.about-text:nth-of-type(2) {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.about-text:nth-of-type(3) {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.about-text:nth-of-type(4) {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.3s;
+}
+
+.about-text:nth-of-type(5) {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.about-quote {
+  opacity: 0;
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 1.9s;
+}
+
+/* ==========================
+   Hover Effects
+========================== */
+
+.about-text {
+  transition: all 0.4s ease;
+}
+
+.about-text:hover {
+  transform: translateY(-8px);
+}
+
+.about-text h3 {
+  position: relative;
+  display: inline-block;
+}
+
+.about-text h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #D4AF37;
+  transition: width 0.5s ease;
+}
+
+.about-text:hover h3::after {
+  width: 100%;
+}
+
+.about-quote {
+  transition: all 0.4s ease;
+}
+
+.about-quote:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+}
+
+.heart {
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+}
+
+/* ==========================
+   Keyframes
+========================== */
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.25);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.25);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+/* ====================================
+   LARGE TABLET & SMALL LAPTOP
+   1024px
+==================================== */
+@media (max-width: 1024px) {
+
+  .about-section {
+    padding: 90px 30px;
+  }
+
+  .about-container {
+    max-width: 95%;
+  }
+
+  .about-title {
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+  }
+
+  .about-quote p {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ====================================
+   TABLET
+   768px
+==================================== */
+@media (max-width: 768px) {
+
+  .about-section {
+    padding: 80px 25px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .about-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .about-text {
+    margin-bottom: 40px;
+  }
+
+  .about-text h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  .about-quote {
+    padding: 22px;
+  }
+
+  .about-quote p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .about-text:hover,
+  .about-quote:hover {
+    transform: none;
+  }
+}
+
+
+/* ====================================
+   MOBILE
+   576px
+==================================== */
+@media (max-width: 576px) {
+
+  .about-section {
+    padding: 70px 18px;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+  }
+
+  .about-subtitle {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .about-text {
+    margin-bottom: 35px;
+  }
+
+  .about-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .about-quote {
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  .about-quote p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ====================================
+   SMALL MOBILE
+   425px
+==================================== */
+@media (max-width: 425px) {
+
+  .about-section {
+    padding: 60px 15px;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .about-subtitle {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .about-text {
+    margin-bottom: 30px;
+  }
+
+  .about-text h3 {
+    font-size: 1rem;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .about-quote {
+    padding: 18px;
+    border-left-width: 3px;
+  }
+
+  .about-quote p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+
+/* ====================================
+   EXTRA SMALL MOBILE
+   375px
+==================================== */
+@media (max-width: 375px) {
+
+  .about-title {
+    font-size: 1.45rem;
+  }
+
+  .about-text h3 {
+    font-size: 0.95rem;
+  }
+
+  .about-text p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .about-quote {
+    padding: 16px;
+  }
+
+  .about-quote p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ====================================
+   VERY SMALL DEVICES
+   320px
+==================================== */
+@media (max-width: 320px) {
+
+  .about-section {
+    padding: 50px 12px;
+  }
+
+  .about-title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .about-subtitle {
+    font-size: 11px;
+  }
+
+  .about-text h3 {
+    font-size: 0.9rem;
+  }
+
+  .about-text p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .about-quote {
+    padding: 14px;
+  }
+
+  .about-quote p {
+    font-size: 0.85rem;
+  }
+}
