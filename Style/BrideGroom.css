@@ -2,7 +2,7 @@
    FONTS (ONLY IF NOT GLOBAL)
 ================================ */
 
-@font-face {
+/* @font-face {
   font-family: "lechit";
   src: url("../fonts/TestSohneBreit-Extraleicht-BF663d89cd9eb84.otf");
 }
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "buch";
   src: url("../fonts/TestSohneBreit-Buch-BF663d89ca2ff42.otf");
-}
+} */
 
 /* ===============================
    BASIC RESET
