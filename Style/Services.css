@@ -64,6 +64,7 @@
 .process-card,
 .services-cta {
   opacity: 1 !important;
+   transform: none !important; 
 }
 
 /* ==========================
@@ -152,7 +153,6 @@
 .process-header {
   text-align: center;
   margin-bottom: 60px;
-  opacity: 0; /* GSAP start */
   transform: translateY(40px);
 }
 
@@ -175,7 +175,6 @@
   padding: 30px;
   text-align: center;
   transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-  opacity: 0; 
   transform: translateY(16px);
 }
 
@@ -213,7 +212,6 @@
   border-radius: 30px;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
-  opacity: 0; /* GSAP start */
   transform: scale(0.9);
 }
 
