@@ -2,14 +2,27 @@
    FONTS (ONLY IF NOT GLOBAL)
 ================================ */
 
+/* Fonts setup */
 @font-face {
-  font-family: "lechit";
-  src: url("../fonts/TestSohneBreit-Extraleicht-BF663d89cd9eb84.otf");
+  font-family: "Lechit";
+  src: url("/assets/fonts/TestSohneBreit-Extraleicht.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "buch";
-  src: url("../fonts/TestSohneBreit-Buch-BF663d89ca2ff42.otf");
+  font-family: "Buch";
+  src: url("/assets/fonts/TestSohneBreit-Buch.otf") format("opentype");
+}
+
+/* Global font usage */
+body {
+  font-family: "Lechit", Arial, sans-serif;
+}
+
+/* Image setup */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ===============================
