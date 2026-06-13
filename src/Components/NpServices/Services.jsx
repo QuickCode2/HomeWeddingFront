@@ -77,7 +77,7 @@ const Services = () => {
 
   useEffect(() => {
     gsap.from(headerRef.current, {
-      opacity: 1,
+      opacity: 0,
       y: 80,
       duration: 1.2,
       ease: "power4.out",
@@ -88,7 +88,7 @@ const Services = () => {
     });
 
     gsap.from(cardsRef.current, {
-      opacity: 1,
+      opacity: 0,
       y: 100,
       duration: 1,
       stagger: 0.15,
@@ -100,7 +100,7 @@ const Services = () => {
     });
 
     gsap.from(processRef.current, {
-      opacity: 1,
+      opacity: 0,
       y: 80,
       duration: 1,
       stagger: 0.2,
@@ -112,7 +112,7 @@ const Services = () => {
     });
 
     gsap.from(ctaRef.current, {
-      opacity: 1,
+      opacity: 0,
       scale: 0.9,
       duration: 1.2,
       ease: "power4.out",
