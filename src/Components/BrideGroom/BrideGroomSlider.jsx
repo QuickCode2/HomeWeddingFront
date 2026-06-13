@@ -61,3 +61,26 @@ const BrideGroomSlider = ({ images, title }) => {
 };
 
 export default BrideGroomSlider;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
