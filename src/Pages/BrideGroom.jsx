@@ -148,7 +148,7 @@ const BrideGroom = () => {
 
       <BrideGroomSlider 
         title="PREWADDING"
-        images={[
+        images={[ 
           Gallery1, Gallery2, Gallery3, Gallery4, Gallery5,
           Gallery6, Gallery7, Gallery8, Gallery9, Gallery10,
          ]}
