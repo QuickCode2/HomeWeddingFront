@@ -3,7 +3,7 @@
 ================================ */
 
 /* Fonts setup */
-@font-face {
+/* @font-face {
   font-family: "Lechit";
   src: url("/assets/fonts/TestSohneBreit-Extraleicht.otf") format("opentype");
 }
@@ -13,17 +13,16 @@
   src: url("/assets/fonts/TestSohneBreit-Buch.otf") format("opentype");
 }
 
-/* Global font usage */
+
 body {
   font-family: "Lechit", Arial, sans-serif;
 }
 
-/* Image setup */
 img {
   max-width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 /* ===============================
    BASIC RESET
