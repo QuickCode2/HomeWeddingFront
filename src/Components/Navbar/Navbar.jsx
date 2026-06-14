@@ -5,6 +5,10 @@ import PhoneIcon from "@mui/icons-material/Phone";
 // import Logo from "../../assets/Navbar-Logo.png"; 
 import "../../../Style/Navbar.css";
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 export default function Navbar() {
   const navRef = useRef(null);
   const lastScroll = useRef(0);
@@ -77,7 +81,7 @@ export default function Navbar() {
             <li>
               <NavLink 
                 to="/" 
-                onClick={closeMenu} 
+                onClick={() => { closeMenu(); scrollToTop(); }} 
                 className={({ isActive }) => isActive ? "active-link" : ""}
               >
                 Home
@@ -87,7 +91,7 @@ export default function Navbar() {
             <li>
               <NavLink 
                 to="/EventVenue" 
-                onClick={closeMenu} 
+                onClick={() => { closeMenu(); scrollToTop(); }} 
                 className={({ isActive }) => isActive ? "active-link" : ""}
               >
                 Event Venue
@@ -97,7 +101,7 @@ export default function Navbar() {
             <li>
               <NavLink 
                 to="/BrideGroom" 
-                onClick={closeMenu} 
+                onClick={() => { closeMenu(); scrollToTop(); }}  
                 className={({ isActive }) => isActive ? "active-link" : ""}
               >
                 Memory Tunnel
@@ -107,7 +111,7 @@ export default function Navbar() {
             <li>
               <NavLink 
                 to="/AboutSection" 
-                onClick={closeMenu} 
+                onClick={() => { closeMenu(); scrollToTop(); }}  
                 className={({ isActive }) => isActive ? "active-link" : ""}
               >
                 About Us
@@ -117,7 +121,7 @@ export default function Navbar() {
             <li>
               <NavLink 
                 to="/services" 
-                onClick={closeMenu} 
+                onClick={() => { closeMenu(); scrollToTop(); }}  
                 className={({ isActive }) => isActive ? "active-link" : ""}
               >
                 Services
@@ -127,7 +131,7 @@ export default function Navbar() {
             <li className="mobile-contact">
               <NavLink
                 to="/ContactUs"
-                onClick={closeMenu}
+                onClick={() => { closeMenu(); scrollToTop(); }} 
                 className={({ isActive }) =>
                   isActive ? "active-link" : ""
                 }
@@ -139,7 +143,7 @@ export default function Navbar() {
 
         {/* Right Side */}
         <div className="navbar-right">
-          <NavLink to="/ContactUs" className="contact-btn">
+          <NavLink to="/ContactUs" className="contact-btn"   onClick={() => { closeMenu(); scrollToTop(); }} >
             <PhoneIcon />
             Contact Us
           </NavLink>
