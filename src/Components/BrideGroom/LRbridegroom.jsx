@@ -45,7 +45,7 @@ const LRbridegroom = () => {
       <div className="BrideGroomSliderTrack">
         {[...images, ...images].map((img, i) => (
           <div className="BrideGroomSlide" key={i}>
-            <img src={img} alt="BrideGroomSlide " />
+            <img src={img} alt="BrideGroomSlide " loading="lazy"/>
           </div>
         ))}
       </div>

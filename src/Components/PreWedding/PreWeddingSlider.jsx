@@ -49,7 +49,7 @@ const  PreWeddingSlider = () => {
             key={i}
             className={`preWeddingSlide ${i === index ? "active" : ""}`}
           >
-            <img src={img} alt="pre-wedding" />
+            <img src={img} alt="pre-wedding" loading="lazy"/>
           </div>
         ))}
       </div>

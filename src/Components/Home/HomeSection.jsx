@@ -91,6 +91,7 @@ export default function HomeSection() {
                   alt="wedding celebration hero"
                   loading="eager"
                   decoding="async"
+                  loading="lazy"
                 />            
                 <div className="photo-card-copy">
               <span>Groom Bridal Entry </span>
@@ -109,6 +110,7 @@ export default function HomeSection() {
                 alt="Couple portrait card"
                 loading="eager"
                 decoding="async"
+                loading="lazy"
               />
             <div className="photo-card-copy">
               <span>The Exchange </span>
@@ -127,6 +129,7 @@ export default function HomeSection() {
               alt="wedding card"
               loading="lazy"
               decoding="eager"
+              loading="lazy"
             />
             <div className="photo-card-copy">
               <span>sacred bond</span>

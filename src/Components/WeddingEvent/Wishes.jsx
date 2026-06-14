@@ -8,7 +8,7 @@ const Wishes = () => {
     <section className="mainwishes">
 
       {/* LEFT IMAGE */}
-      <img src={groomImg} alt="Groom" className="WishesImgLeft" />
+      <img src={groomImg} alt="Groom" className="WishesImgLeft" loading="lazy"/>
 
       {/* CENTER CONTENT */}
       <div className="wishes-content">
@@ -32,7 +32,7 @@ const Wishes = () => {
       </div>
 
       {/* RIGHT IMAGE */}
-      <img src={brideImg} alt="Bride" className="WishesImgRight" />
+      <img src={brideImg} alt="Bride" className="WishesImgRight" loading="lazy"/>
 
     </section>
   );

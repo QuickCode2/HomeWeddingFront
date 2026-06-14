@@ -42,7 +42,7 @@ export default function Journey() {
         >
           <div className="journey-content">
             <div className="journey-inner">
-              <img src={event.image} alt={event.title} className="journey-image" />
+              <img src={event.image} alt={event.title} className="journey-image" loading="lazy"/>
               <div className="journey-text">
                 <span className="journey-date">{event.date}</span>
                 <h3>{event.title}</h3>

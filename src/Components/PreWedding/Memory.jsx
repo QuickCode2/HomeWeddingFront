@@ -47,7 +47,7 @@ export default function Memory() {
       {/* Wedding Section */}
       <div className="grid-layout">
         <div className="grid-item">
-          <img src={TravelShoot} alt="Wedding Location" />
+          <img src={TravelShoot} alt="Wedding Location" loading="lazy"/>
           <div className="overlay">
             <h2>Return to the Beginning</h2>
             <p>
@@ -59,7 +59,7 @@ export default function Memory() {
         </div>
 
         <div className="grid-item">
-          <img src={BeachShoot} alt="Wedding Album" />
+          <img src={BeachShoot} alt="Wedding Album" loading="lazy"/>
           <div className="overlay">
             <h2>Cherish Quiet Moments </h2>
             <p>
@@ -70,7 +70,7 @@ export default function Memory() {
         </div>
    
            <div className="grid-item">
-          <img src={GardenShoot} alt="Wedding Album" />
+          <img src={GardenShoot} alt="Wedding Album" loading="lazy"/>
           <div className="overlay">
             <h2>Celebrate Traditions Together</h2>
             <p>

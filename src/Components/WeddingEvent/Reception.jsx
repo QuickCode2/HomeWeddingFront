@@ -62,7 +62,7 @@ export default function ReceptionSection() {
           >
             {/* Image */}
             <div className="reception-img">
-              <img src={plan.image} alt={plan.name} />
+              <img src={plan.image} alt={plan.name} loading="lazy"/>
               <div className="img-overlay">✨ View Memory</div>
             </div>
 

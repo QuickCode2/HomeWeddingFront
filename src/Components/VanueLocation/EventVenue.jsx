@@ -52,7 +52,7 @@ const EventVenue = () => {
      {/* Wedding Card */}
     <div className="venue-info">
       <div className="image-wrapper">
-        <img src={venueImg} alt="Wedding Venue" />
+        <img src={venueImg} alt="Wedding Venue" loading="lazy"/>
         <div className="image-overlay">
         </div>
       </div>

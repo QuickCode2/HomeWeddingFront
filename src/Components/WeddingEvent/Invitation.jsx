@@ -39,7 +39,7 @@ const Invitation = () => {
           </p>
 
           <div className="couple-wrapper">
-            <img src={coupleImg} alt="Couple" />
+            <img src={coupleImg} alt="Couple" loading="lazy"/>
           </div>
 
           <div className="details">
@@ -55,7 +55,7 @@ const Invitation = () => {
 
         {/* RIGHT SIDE - CARD */}
         <div className="card-section">
-          <img src={cardImg} alt="Wedding Card" className="card-image" />
+          <img src={cardImg} alt="Wedding Card" className="card-image" loading="lazy"/>
         </div>
       </div>
     </div>

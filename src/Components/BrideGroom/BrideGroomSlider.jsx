@@ -38,9 +38,10 @@ const BrideGroomSlider = ({ images, title }) => {
         <img
           src={images[index]}
           alt={title}
+          loading="lazy"
           className={`sliderImage ${
-            loaded ? "showImage" : ""
-          }`}
+          loaded ? "showImage" : ""
+            }`}
         />
 
         <div className="sliderOverlay">

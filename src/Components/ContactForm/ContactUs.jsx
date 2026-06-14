@@ -108,6 +108,7 @@ return (
           alt="Nitesh Prajapati"
           className="developer-img"
           onClick={() => setShowImage(true)}
+          loading="lazy"
         />
 
 
@@ -116,6 +117,7 @@ return (
           src={DeveloperLogo}
           alt="Nitesh Prajapati - Full Stack Developer"
           className="developer-logo"
+          loading="lazy"
         />
       </div>
     </div>
@@ -127,6 +129,7 @@ return (
           src={developerImg}
           alt="Nitesh Prajapati"
           className="modal-image"
+          loading="lazy"
         />
         <button
           className="close-btn"
