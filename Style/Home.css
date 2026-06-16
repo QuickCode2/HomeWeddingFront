@@ -377,8 +377,10 @@
   }
 }
 
+/* ====================================
+      Mobile Screens (425px+)
+======================================== */
 @media (max-width: 425px) {
-
   .wedding-copy h1 {
     font-size: 2.3rem;
   }
@@ -454,21 +456,20 @@
 
 }
 
-
- /* ====================================
+/* ====================================
       Large Screens (1600px+)
 ======================================== */
 @media (min-width: 1600px) {
   .Wedding-hero {
-    max-width: 1600px;
+    max-width: 2000px;
     margin: 0 auto;
-    padding: 4rem 6%;
+    padding: 100px 6%;
     gap: 2rem; 
   }
 
   .wedding-copy h1 {
-    font-size: clamp(3rem, 5vw, 6.5rem);
-    margin: 4rem 0 2rem;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    margin: 5rem 0 2rem;
   }
 
   .wedding-copy p {
@@ -476,6 +477,7 @@
     line-height: 1.7;
     max-width: 1200px;
     margin: 0 auto;
+    padding-right: 6rem;
   }
 
   .wedding-stats {
@@ -484,22 +486,38 @@
     max-width: 45rem;
   }
 
-  .photo-card-primary {
-    right: 20rem;
-    width: 26rem;
-    height: 32rem;
-  }
-
-  .photo-card-secondary {
-    left: 20rem;
-    width: 26rem;
-    height: 32rem;
-  }
-
-  .photo-card-accent {
-    width: 42rem;
-    height: 14rem;
-    top: 36rem;
-  }
+.wedding-eyebrow {
+  position: relative;       
+  top: -4rem;
+  left: 1%;              
+  margin-bottom: 2rem;      
+  text-align: center;
+  letter-spacing: 0.40rem;
+  line-height: 1.8;
+  z-index: 10;              
 }
 
+.photo-card-primary {
+  top: 1rem;
+  right: 25rem;
+  width: 23rem;
+  height: 29rem;
+  transform: rotateY(-13deg) rotateX(7deg) translateZ(40px);
+}
+
+.photo-card-secondary {
+  top: 1rem;
+  left: 25rem;
+  width: 25rem;
+  height: 29rem;
+  transform: rotateY(17deg) rotateX(2deg) translateZ(90px);
+}
+
+.photo-card-accent {
+  left: 1rem;
+  top: 34rem;
+  width: 48rem;
+  height: 12rem;
+  transform: rotateX(12deg) rotateZ(-8deg) translateZ(130px);
+}
+}
